@@ -25,7 +25,9 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '18'
-          
+      - name: Vérifier les fichiers
+        run: ls -l /home/runner/work/portfolio/portfolio
+    
       - name: Install Dependencies
         run: npm install
         
@@ -39,8 +41,6 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: './dist'
-      - name: Vérifier les fichiers
-        run: ls -l /home/runner/work/portfolio/portfolio
 
   deploy:
     environment:
