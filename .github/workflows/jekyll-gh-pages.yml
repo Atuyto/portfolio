@@ -39,6 +39,8 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: './dist'
+      - name: Vérifier les fichiers
+        run: ls -l /home/runner/work/portfolio/portfolio
 
   deploy:
     environment:
